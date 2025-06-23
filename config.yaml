@@ -1,0 +1,20 @@
+server:
+  port: 9080
+
+systemd_monitoring:
+  enabled: true
+  systemd_names:
+    - vpn
+
+evm_monitoring:
+  enabled: true
+  rpc_url: "https://ethereum-erigon-sepolia.zeeve.net/939f4pnibxglwa1x8oci/rpc"        # Ethereum execution client JSON-RPC endpoint
+  beacon_url: "https://ethereum-erigon-sepolia.zeeve.net/939f4pnibxglwa1x8oci/beacon"     # Consensus (beacon) client REST API
+  monitor_addresses:
+    # ETH balances will be fetched for each address here
+    - "0xc9EE7Ab1A2D25ECEB128bF76B91963Cb44336537"
+    - "0x07BF41ade9d3499c5e5e7E6c16aEd5D76eEaB9ad"
+  token_contracts:
+    # ERC-20 balances will be fetched for each contract/address pair
+    - "0x3D11D1c1a8763c8508e0F3d4F6ec08D0D6cC293e"
+    - "0x9ac562D0B256D178155B878a54AdF1FFA13356fF"

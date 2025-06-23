@@ -1,0 +1,12 @@
+server:
+  port: 9080
+
+metrics:
+  interval: 60  # in seconds
+
+
+systemd_monitoring:
+  enabled: true
+  systemd_names:
+    - vpn
+
